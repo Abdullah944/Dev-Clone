@@ -46,21 +46,30 @@ npm run dev
 
 ### Setup FireBase(steps)
 
-- Make Fire base Project (Follow the instructions)
-- Enable Firebase Authentication ( auth tab >getting started > google tab)
-- Enable Firebase Database ( production mode for more strict security & test for faster development)
-- Go to the setting wheel >Project setting> your apps > to get a Generate a config > create app web app > will give you firebase config in js as a object for client side api **keys** >will tell firebase how to connect to the client
-- Initialize Firebase ( npm install firebase --save ) & get the functions from firebase
--
+- **Make Fire base Project** > (Follow the instructions)
+- **Enable Firebase Authentication** > ( auth tab >getting started > google tab)
+- **Enable Firebase Database** > ( production mode for more strict security & test for faster development)
+- **Go to the setting wheel** > Project setting> your apps > to get a Generate a config > create app web app > will give you firebase config in js as a object for client side api **keys** >will tell firebase how to connect to the client
+- **Initialize Firebase** > ( `npm install firebase --save` ) & get the functions from firebase
 
 ### Routing
 
 - **Dynamic routing** > is the ability to change the URL of the app without reloading the page.
 - **Dynamic route segment** > (like variable) is a segment of the URL that can be changed dynamically , EX[admin/**slug.tsx**].
 - **Folder/Directory with dynamic route** > [username]/index.tsx > to see it EX localhost:3000/anythingHere > Note: will not get conflict with the static pages like admin/index.tsx
-- **dynamic dir + dynamic route segment** > [username]/[slug]/index.tsx > to see it EX localhost:3000/anythingHere/anythingHere
+- **Dynamic dir + dynamic route segment** > [username]/[slug]/index.tsx > to see it EX localhost:3000/anythingHere/anythingHere
 - **Next Link** > when use it you can add string to reference the page or give pathName with the query of the name
-- **Prefetch** > will preload the page before it is rendered > https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ > EX `<div> <Link prefetch={true} href={{ pathname:'/[username]', query:{username:'A'}, }}> <a> A's profile </a> /Link> </div>I `
+- **Prefetch** > will preload the page before it is rendered > https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ > EX
+
+  ```
+  <div> <Link prefetch={true} href={{ pathname:'/[username]', query:{username:'A'}, }}>
+  <a> A's profile </a> /Link>
+  </div>I
+  ```
+
+### Loader
+
+- **Loader** > is a loading animation that will show when the page is loading
 
 ## Extra
 
