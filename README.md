@@ -71,6 +71,11 @@ npm run dev
 
 - **Loader** > is a loading animation that will show when the page is loading
 
+### NavBar
+
+- **priority** in a <Image priority/> will prevent the img from blinking
+- **Next Link** > EX <Link href={`/${username}`}> <a> {username} </a> </Link>
+
 ## Extra
 
 - **Costume Snippets** > Make your short cut code like **rafce** > press Shift + command P > config Snippets > make like the doc's > https://code.visualstudio.com/docs/editor/userdefinedsnippets#_create-your-own-snippets
