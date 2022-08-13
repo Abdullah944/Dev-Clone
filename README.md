@@ -76,6 +76,17 @@ npm run dev
 - **priority** in a <Image priority/> will prevent the img from blinking
 - **Next Link** > EX <Link href={`/${username}`}> <a> {username} </a> </Link>
 
+### React-hot-toast
+
+- https://react-hot-toast.com/
+- **React-hot-toast** > is a library that will show a toast message when you make a change in the app
+- Add it to app.tsx > <Toaster/> > call it everywhere > EX >
+  ```
+  <button onClick={()=>toast.success('hello toast!')}>
+  Toast Me
+  </button>
+  ```
+
 ## Extra
 
 - **Costume Snippets** > Make your short cut code like **rafce** > press Shift + command P > config Snippets > make like the doc's > https://code.visualstudio.com/docs/editor/userdefinedsnippets#_create-your-own-snippets
@@ -85,3 +96,8 @@ npm run dev
 
 - https://www.npmjs.com/package/react-firebase-hooks
 - https://firebase.google.com/docs/web/setup
+- https://react-hot-toast.com/
+
+```
+
+```
