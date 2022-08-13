@@ -1,0 +1,23 @@
+{
+	// Place your devclone workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"newPage": { //* snippet name
+		"scope": "javascript,typescript, typescriptreact", //* scope where the snippet is applicable(typescriptreact = tsx)
+		"prefix": "page", //* prefix what the shortcut is
+		"body": [ //* body of the snippet
+			"export default function Page({ }) {",
+			"  return (",
+			"    <main>",
+			"    </main>",
+			"  )",  
+			"}",
+		],
+		"description": "React component for a new page" //* description of the snippet
+	}
+}
+//* https://code.visualstudio.com/docs/editor/userdefinedsnippets#_create-your-own-snippets
