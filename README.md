@@ -74,18 +74,30 @@ npm run dev
 ### NavBar
 
 - **priority** in a <Image priority/> will prevent the img from blinking
-- **Next Link** > EX <Link href={`/${username}`}> <a> {username} </a> </Link>
+- **Next Link** > EX >
+  ```
+  <Link href={`/${username}`}> <a> {username} </a> </Link>
+  ```
 
 ### React-hot-toast
 
-- https://react-hot-toast.com/
 - **React-hot-toast** > is a library that will show a toast message when you make a change in the app
-- Add it to app.tsx > <Toaster/> > call it everywhere > EX >
-  ```
-  <button onClick={()=>toast.success('hello toast!')}>
-  Toast Me
-  </button>
-  ```
+- **Add it to app.tsx** > <Toaster/> > call it everywhere > EX >
+
+```
+
+<button onClick={()=>toast.success('hello toast!')}>
+Toast Me
+</button>
+
+```
+
+### Auth Intro
+
+- **Steps as front** > to use the user info : 1- Get firebase user (is logged in) . 2- Fetch user document from DB.
+- **Minimize reading this function** > (render with every page) > we make the auth Data in Global context(so it's available for every page before it render , so it will be there from the first time the app ask for the user auth)
+- **No costume username** in firebase > we will do it
+- **Note**: We don't need server side rendering for now > because search engin will never see this content > better to render it in the **client** side
 
 ## Extra
 
