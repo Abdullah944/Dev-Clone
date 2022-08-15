@@ -1,14 +1,11 @@
-import Image, { StaticImport } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { useContext } from "react";
+import { UserContext } from "../lib/context";
 
-type NavbarProps = {
-  user: {
-    photoURL: string | StaticImport;
-  };
-  username: string;
-};
-export default function Navbar({ user, username }: NavbarProps) {
+export default function Navbar() {
+  const userContext = useContext(UserContext); //* it will rerender every changes in the app for the context
+
   return (
     <nav className="navbar">
       <ul>
@@ -19,7 +16,7 @@ export default function Navbar({ user, username }: NavbarProps) {
         </li>
 
         {/* User is <signed-in> and <has> username */}
-        {username && (
+        {userContext?.username && (
           <>
             <li className="push-left">
               <Link href="/admin">
@@ -27,15 +24,14 @@ export default function Navbar({ user, username }: NavbarProps) {
               </Link>
             </li>
             <li>
-              <Link href={`/${username}`}>
-                <Image src={user?.photoURL} alt="user img" />
-              </Link>
+              {/* <Link href={`/${userContext.username}`}> */}
+              {/* <Image src={userContext.photoURL} alt="user img" />  */}
+              {/* </Link> */}
             </li>
           </>
         )}
-
         {/* User is <not> signed OR has <not> created username */}
-        {!username && (
+        {!userContext?.username && (
           <li>
             <Link href="/enter">
               <button className="btn-blue">Log in</button>

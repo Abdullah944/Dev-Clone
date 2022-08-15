@@ -1,17 +1,19 @@
 import Image from "next/image";
 import { auth, googleAuthProvider } from "../lib/firebase";
 import GoogleImg from "../public/googleImg.png";
+import { useContext } from "react";
+import { UserContext } from "../lib/context";
 
 export default function EnterPage() {
-  const user = null;
-  const username = null;
+  //* Take all the user context
+  const userContext = useContext(UserContext);
 
   return (
     <main>
       {/* If the user Sign-in */}
-      {user ? (
+      {userContext?.user ? (
         // * If the user sign-in BUT have no username > Show the Form
-        !username ? (
+        !userContext.username ? (
           <UsernameForm />
         ) : (
           <SignOutButton /> //* else > user signed in, has username ==> <SignOutButton />

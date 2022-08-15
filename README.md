@@ -106,6 +106,17 @@ Toast Me
 - **Add Statement** > if user sign-in or out or not having username
 - **Note** > Tou can Sign-in & see your info in the inspect > Application > indexDB > firebaseLocalStorage
 
+### Auth-Context (react context API)
+
+- **Context** > provides a way to pass data through the component tree without having to pass props down manually at every level > make the User info all the app can use it > share data throughout the component tree
+- **.Provider** > using it will remove the idea of passing props
+  ```
+  <ThemeContext.**Provider** value="dark">
+  <HOME/>
+  </ThemeContext.**Provider**>
+  ```
+  - steps > Import createContext > const & make default value > round the app.tsx with it + the .Provider > import useContextHook from reate & pass the const as argument
+
 ## Extra
 
 - **Costume Snippets** > Make your short cut code like **rafce** > press Shift + command P > config Snippets > make like the doc's > https://code.visualstudio.com/docs/editor/userdefinedsnippets#_create-your-own-snippets
@@ -116,3 +127,4 @@ Toast Me
 - https://www.npmjs.com/package/react-firebase-hooks
 - https://firebase.google.com/docs/web/setup
 - https://react-hot-toast.com/
+- https://reactjs.org/docs/context.html
