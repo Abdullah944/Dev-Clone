@@ -99,6 +99,13 @@ Toast Me
 - **No costume username** in firebase > we will do it
 - **Note**: We don't need server side rendering for now > because search engin will never see this content > better to render it in the **client** side
 
+### Google Sign-in
+
+- **Google Sign-in** > make the user sign-in using the google or Gmail
+- **importing auth / googleAuthProvider** > to use them in entry.tsx
+- **Add Statement** > if user sign-in or out or not having username
+- **Note** > Tou can Sign-in & see your info in the inspect > Application > indexDB > firebaseLocalStorage
+
 ## Extra
 
 - **Costume Snippets** > Make your short cut code like **rafce** > press Shift + command P > config Snippets > make like the doc's > https://code.visualstudio.com/docs/editor/userdefinedsnippets#_create-your-own-snippets
@@ -109,7 +116,3 @@ Toast Me
 - https://www.npmjs.com/package/react-firebase-hooks
 - https://firebase.google.com/docs/web/setup
 - https://react-hot-toast.com/
-
-```
-
-```
