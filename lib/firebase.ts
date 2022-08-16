@@ -2,6 +2,7 @@
 //* that will be set down to the client application.
 
 // v9 compat packages are API compatible with v8 code
+import { getAuth } from "firebase/auth";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
@@ -24,7 +25,7 @@ if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
 //* To use it the app
-export const auth = firebase.auth();
+export const auth = getAuth();
 export const firestore = firebase.firestore();
 export const storage = firebase.storage();
 //* This will tell the provider what to use when pop up model for the user to sign-in

@@ -1,8 +1,13 @@
 import Image from "next/image";
-import { auth, googleAuthProvider } from "../lib/firebase";
 import GoogleImg from "../public/googleImg.png";
+// init exported methods from firebase
+import { auth, googleAuthProvider } from "../lib/firebase";
+//react hook
 import { useContext } from "react";
+// grab the context from the context file
 import { UserContext } from "../lib/context";
+// handle popUP for google sign in
+import { signInWithPopup } from "firebase/auth";
 
 export default function EnterPage() {
   //* Take all the user context
@@ -27,12 +32,13 @@ export default function EnterPage() {
 //* Sign in with Google button
 function SignInButton() {
   const signInWithGoogle = async () => {
-    await auth.signInWithPopup(googleAuthProvider);
+    // await google auth provider
+    await signInWithPopup(auth, googleAuthProvider);
   };
 
   return (
     <button className="btn-google" onClick={signInWithGoogle}>
-      <Image src={GoogleImg} alt="google icon" /> Sign in with Google
+      <Image src={GoogleImg} alt="google icon" priority /> Sign in with Google
     </button>
   );
 }
