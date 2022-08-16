@@ -117,6 +117,25 @@ Toast Me
   ```
   - steps > Import createContext > const & make default value > round the app.tsx with it + the .Provider > import useContextHook from reate & pass the const as argument
 
+### Auth-hook (useAuthState())
+
+- **useAuth** > Listen To Current User > when the user sign-in it will populated with the user obj > when sign-out = null
+- **Snapshot** > instance contains data from a Firebase Database location. Any time you read Database data, you receive the data as a DataSnapshot.
+
+```
+  unsubscribe = ref.onSnapshot((doc) => {
+        //* Return Latest data from the doc or dataBase
+        setUsername(doc.data()?.username);
+      });
+
+```
+
+```
+// Get current user from firebase
+const [user] = useAuthState(auth);
+
+```
+
 ## Extra
 
 - **Costume Snippets** > Make your short cut code like **rafce** > press Shift + command P > config Snippets > make like the doc's > https://code.visualstudio.com/docs/editor/userdefinedsnippets#_create-your-own-snippets
