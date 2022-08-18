@@ -166,6 +166,31 @@ const [user] = useAuthState(auth);
   batch.commit();
   ```
 
+  ### SSR-SEO in next
+
+  - **static Page** > a page that <don't relay> on any external data like firebase or external api
+  - **dynamic website** > a website that <relay> on external data like firebase or external api
+  - **SSR** > server side rendering(if you need to cache data on the server) > fetch data on the server & prevent rendering until the data is <ready> or available > difficult to cache which lead to unnecessary read to the DB That will slower the performance of the website >
+
+  ```export aysnc function getServerSideProps(){
+    // Fetch data
+    return{props:{data},
+    }
+  }
+  ```
+
+- **SSG** > Static Generation > generate a static website on the server side > fetch the data at build time (good for caching & performance) > But when you need to change a thing on the page you need to reload the page or redeploy it
+- **ISR** > Incremental Static Rendering > render the page incrementally when the data is available > take from both(SSG - SSR) you can add time to refetch data >
+- ```
+    export async function getStaticProps(){
+      // Fetch data here
+  }
+    return{
+    }
+      props:{data},
+      revalidate:100 //HERE
+  ```
+
 ## Extra
 
 - **Costume Snippets** > Make your short cut code like **rafce** > press Shift + command P > config Snippets > make like the doc's > https://code.visualstudio.com/docs/editor/userdefinedsnippets#_create-your-own-snippets
@@ -179,3 +204,7 @@ const [user] = useAuthState(auth);
 - https://reactjs.org/docs/context.html
 - https://firebase.google.com/docs/firestore/manage-data/add-data
 - https://firebase.google.com/docs/firestore/manage-data/transactions
+
+```
+
+```
