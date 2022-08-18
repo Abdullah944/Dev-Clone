@@ -7,6 +7,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 import "firebase/compat/storage";
+import { getFirestore } from "firebase/firestore";
 
 //* Taken from the web app config in firebase site
 const firebaseConfig = {
@@ -25,6 +26,9 @@ if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
 //* To use it the app
+// Ensure that "db" is defined and initialized
+export const db = getFirestore();
+
 export const auth = getAuth();
 export const firestore = firebase.firestore();
 export const storage = firebase.storage();
