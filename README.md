@@ -136,6 +136,36 @@ const [user] = useAuthState(auth);
 
 ```
 
+### Custom-usernames
+
+- **Debounce** > the search or fetch the data after the user stop typing `npm i --save-dev @types/lodash.debounce`
+- **reverses mapping** > to get the username from the user id(collection) that connected to it
+- **init fireStore(Database)** > `export const db = getFirestore(); `
+- **addDoc** > add a new doc to the collection >
+
+  ```
+  const usernameDoc: DocumentReference<DocumentData> | any = await addDoc( collection(db, 'usernames'),
+  {
+  username: formValue,
+  }
+  );
+      setDoc(usernameDoc, { capital: true }, { merge: true });
+
+  ```
+
+  - **batch** > to add multiple docs to the collection > EX >
+
+  ```
+  const batch = db.batch();
+  const usernameDoc: DocumentReference<DocumentData> | any = await addDoc( collection(db, 'usernames'),
+  {
+  username: formValue,
+  }
+  );
+  batch.set(usernameDoc, { capital: true });
+  batch.commit();
+  ```
+
 ## Extra
 
 - **Costume Snippets** > Make your short cut code like **rafce** > press Shift + command P > config Snippets > make like the doc's > https://code.visualstudio.com/docs/editor/userdefinedsnippets#_create-your-own-snippets
@@ -147,3 +177,5 @@ const [user] = useAuthState(auth);
 - https://firebase.google.com/docs/web/setup
 - https://react-hot-toast.com/
 - https://reactjs.org/docs/context.html
+- https://firebase.google.com/docs/firestore/manage-data/add-data
+- https://firebase.google.com/docs/firestore/manage-data/transactions
