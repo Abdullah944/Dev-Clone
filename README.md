@@ -190,6 +190,8 @@ const [user] = useAuthState(auth);
       props:{data},
       revalidate:100 //HERE
   ```
+  ### Data Model
+  - collectionGroup > query all subcollections of a collection > EX user > will have posts > like -
 
 ## Extra
 
