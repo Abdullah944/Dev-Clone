@@ -60,3 +60,6 @@ export const firestore = firebase.firestore();
 export const storage = firebase.storage();
 //* This will tell the provider what to use when pop up model for the user to sign-in
 export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+
+//Use this function to convert a Firestore timestamp to a number.
+export const fromMillis = firebase.firestore.Timestamp.fromMillis;
