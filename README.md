@@ -190,8 +190,14 @@ const [user] = useAuthState(auth);
       props:{data},
       revalidate:100 //HERE
   ```
+
   ### Data Model
-  - collectionGroup > query all subcollections of a collection > EX user > will have posts > like -
+
+  - collectionGroup > query all subcollections of a collection > EX user > will have posts > likes
+
+  ### SSR-User-Profile-Page
+
+  -
 
 ## Extra
 
@@ -206,7 +212,3 @@ const [user] = useAuthState(auth);
 - https://reactjs.org/docs/context.html
 - https://firebase.google.com/docs/firestore/manage-data/add-data
 - https://firebase.google.com/docs/firestore/manage-data/transactions
-
-```
-
-```
