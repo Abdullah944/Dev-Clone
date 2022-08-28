@@ -193,11 +193,21 @@ const [user] = useAuthState(auth);
 
   ### Data Model
 
-  - collectionGroup > query all subcollections of a collection > EX user > will have posts > likes
+  - **collectionGroup** > query all subcollections of a collection > EX user > will have posts > likes
 
   ### SSR-User-Profile-Page
 
   -
+
+### SSR-Paginated-Home-Page-Feed
+
+- **collectionGroup** > Grab any subcollection of posts nomatter where it is stored >
+
+```
+  .collectionGroup("posts")
+```
+
+-
 
 ## Extra
 
@@ -212,3 +222,7 @@ const [user] = useAuthState(auth);
 - https://reactjs.org/docs/context.html
 - https://firebase.google.com/docs/firestore/manage-data/add-data
 - https://firebase.google.com/docs/firestore/manage-data/transactions
+
+```
+
+```
